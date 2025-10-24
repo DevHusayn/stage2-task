@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Form</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <main class="container" data-testid="test-user-main">
+        <nav class="header" data-testid="test-header">
+            <p class="active" data-testid="test-nav-profile">PROFILE</p>
+            <ul data-testid="test-nav-list">
+                <li><a href="contact.html" data-testid="test-nav-contact">CONTACT</a></li>
+                <li><a href="about.html" data-testid="test-nav-about">ABOUT ME</a></li>
+            </ul>
+        </nav>
+
+        <section class="content" data-testid="test-user-form">
+            <form data-testid="test-contact-form" id="contactForm" novalidate>
+                <h1 data-testid="test-contact-title">CONTACT ME</h1>
+                <p data-testid="test-contact-description">
+                    Get in touch with us. We'd love to hear from you and will respond as soon as possible.
+                </p>
+
+                <div data-testid="test-contact-name-wrapper">
+                    <label for="name" data-testid="test-contact-label-name">Full Name*</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name"
+                        data-testid="test-contact-name" aria-describedby="error-name" />
+                    <span id="error-name" class="error" data-testid="test-contact-error-name" aria-live="polite"></span>
+                </div>
+
+                <div data-testid="test-contact-email-wrapper">
+                    <label for="email" data-testid="test-contact-label-email">Email*</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email"
+                        data-testid="test-contact-email" aria-describedby="error-email" />
+                    <span id="error-email" class="error" data-testid="test-contact-error-email"
+                        aria-live="polite"></span>
+                </div>
+
+                <div data-testid="test-contact-subject-wrapper">
+                    <label for="subject" data-testid="test-contact-label-subject">Subject*</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this about?"
+                        data-testid="test-contact-subject" aria-describedby="error-subject" />
+                    <span id="error-subject" class="error" data-testid="test-contact-error-subject"
+                        aria-live="polite"></span>
+                </div>
+
+                <div data-testid="test-contact-message-wrapper">
+                    <label for="message" data-testid="test-contact-label-message">Message us*</label>
+                    <textarea id="message" name="message" rows="4" required
+                        placeholder="Tell us more about your enquiry" data-testid="test-contact-message"
+                        aria-describedby="error-message"></textarea>
+                    <span id="error-message" class="error" data-testid="test-contact-error-message"
+                        aria-live="polite"></span>
+                </div>
+
+                <button type="submit" class="submit" data-testid="test-contact-submit" about="_blank">📨 Send
+                    Message</button>
+                <p id="successMessage" class="success" data-testid="test-contact-success" aria-live="polite" hidden>✅
+                    Your message has been sent successfully!</p>
+            </form>
+            </form>
+        </section>
+    </main>
+    <script src='script.js'></script>
+</body>
+
+</html>
